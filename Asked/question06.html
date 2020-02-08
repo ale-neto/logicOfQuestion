@@ -1,0 +1,62 @@
+<!-- Foi feita uma pesquisa em cinco cidades brasileiras para coletar dados sobre acidentes de
+trânsito. Os dados solicitados são: nome da cidade, número de veículos de passeio e
+número de acidentes de trânsito com vítimas.
+Deseja-se saber:
+1) Qual é o maior e qual é o menor índice de acidentes de trânsito e a que cidades
+pertencem.
+2) Qual é a média de veículos nas cinco cidades juntas.
+3) Qual é a média de acidentes de trânsito nas cidades com menos de 2.000 veículos de
+passeio. -->  
+
+<script>
+
+function pulaLinha() {
+        document.write("<br>");
+    }
+	function coletaDeInformacoes(){
+		var cidadeMaAcd = "";
+		var cidadeMeAcd = "";
+		var maiorIndiceAcd = 0 ;
+		var menorIndiceAcd = 999999;
+		var qtdVeiculos = 0;
+		var menos2000 = 0;
+		var totalAdcCidade2000 =0;
+		
+		for(var i = 0; i < 5; i++ ){
+			var nomeCidade = prompt("Qual o nome da cidade? ");
+			var numVeiculos = prompt("Qual quantidade de veiculos de passeio? ");
+				numVeiculos = parseFloat(numVeiculos);
+			var numAcdVitimas = prompt("Qual quantidade de acidente com vitima na cidade? ");
+				numAcdVitimas = parseFloat(numAcdVitimas);
+			/* Questão 1*/
+			if(numAcdVitimas > maiorIndiceAcd){
+					maiorIndiceAcd = numAcdVitimas;
+					cidadeMaAcd = nomeCidade;
+			} 
+			if(numAcdVitimas < menorIndiceAcd){
+					menorIndiceAcd = numAcdVitimas;
+					cidadeMeAcd = nomeCidade;
+			}
+			/* Questão 2*/
+			qtdVeiculos = qtdVeiculos + numVeiculos;
+			
+			/* Questão 3*/
+			if(numVeiculos < 2000){
+				totalAdcCidade2000 = totalAdcCidade2000 + numAcdVitimas;
+				menos2000++;
+			}
+		}
+		document.write("Cidade com menos indice acidente " , cidadeMeAcd);
+		pulaLinha();
+		document.write("Cidade com maior indice acidente " , cidadeMaAcd);
+		pulaLinha();
+		document.write("Media de veiculos nas cidades " , qtdVeiculos/5);
+		pulaLinha();
+		document.write("Media de acidentes de transito " , totalAdcCidade2000/menos2000);
+		pulaLinha();
+		
+		
+	}
+	coletaDeInformacoes();
+	
+</script>

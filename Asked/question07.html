@@ -1,0 +1,34 @@
+<!-- Informe o nome e a quantidade de habitantes de 5 cidades e responda as questões:
+1. Quantas cidade são grandes?
+2. Quantas cidade são pequenas?
+3. Quantas cidade são medias?
+OBS: Grande = Mais de 10 habitantes;
+     Media = Entre 5 e 9 habitantes
+     Pequena = menos 5 habitantes-->
+
+<script>
+	function cidade(){
+	var cidadeG = 0
+	var cidadeM = 0
+	var cidadeP = 0
+	
+	for(var i = 0; i < 5; i++){
+		var nomeCidade = prompt("Qual o nome da cidade? ");
+		var qtdHabitantes = prompt("Quantidade de habitantes da cidade? ");
+		
+		if(qtdHabitantes > 9){
+			cidadeG++;
+		}else if(qtdHabitantes < 5){
+			cidadeP++;
+		}else{
+			cidadeM++;
+		}
+	}
+		document.write("Quanitidade de cidade grandes ",cidadeG);
+		document.write("<hr>");
+		document.write("Quanitidade de cidade medias ",cidadeM);
+		document.write("<hr>");
+		document.write("Quanitidade de cidade pequenas ", cidadeP);
+}
+cidade();
+</script>

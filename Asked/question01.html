@@ -1,0 +1,85 @@
+<!-- Simule o funcionamento de um caixa eletronico. O algoritmo recebe como entrada o saldo do correntista. Este, por sua vez, pode
+realizar uma das seguintes operações: saque, pagamento ou depósito. Saques e pagamentos só podem ser realizados 
+caso exista saldo suficiente. Após a realização de uma operação, o saldo deve ser exibido, assim como uma mensagem questionando
+o correntista se ele deseja realizar outra operação. Em caso afirmativo, uma nova operação deve ser selecionada. 
+Do contrário, o correntista se retira do caixa eletronico. Obs.: o correntista pode realizar quantas operações desejar. -->
+
+<!-- REPOSTA -->
+<script>
+  function pulaLinha() {
+    document.write("<br>");
+  }
+
+  function banco() {
+  // Variaveis
+  var saldoCorrente = prompt("Qual o saldo corrente? ");
+  saldoCorrente = parseFloat(saldoCorrente);
+  var operacao;
+  var saque;
+  var saqueTotal;
+  var pagamento;
+  var deposito;
+  
+  // do while
+  do{
+    operacao = prompt("Qual a operação que deseja realizar? EX: saque, pagamento ou deposito ");
+    
+    // switch
+    switch(operacao){
+      case 'saque':
+      var saque = prompt("Qual o valor do saque? ");
+      saque = parseFloat(saque);
+      if (saldoCorrente >= saque) {
+        alert("Saque de " + saque + " pode ser realizado");
+        saldoCorrente =  saldoCorrente - saque;
+        alert("Saldo em conta " + saldoCorrente);
+        pulaLinha();
+        document.write("SAQUE ");
+        pulaLinha();
+        document.write("Saque realizado " + saque);
+        pulaLinha();
+        document.write("Saldo em conta " + saldoCorrente);
+      }else{
+        document.write("Saque de " + saque + " não pode ser realizado" );
+      }  
+      break;
+
+      case 'pagamento':
+      var pagamento = prompt("Qual o valor do pagamento? ");
+      pagamento = parseFloat(pagamento);
+      if (saldoCorrente >= pagamento) {
+        alert("Pagamento de " + pagamento + " pode ser realizado!!!");
+        saldoCorrente =  saldoCorrente - pagamento;
+        alert("Saldo em conta " + saldoCorrente);
+        pulaLinha();
+        document.write("PAGAMENTO");
+        pulaLinha();
+        document.write("Pagamento de "+ pagamento +" realizado!!! ");
+        pulaLinha();
+        document.write("Saldo em conta " + saldoCorrente);
+      }else{
+        document.write("Pagamento de " + pagamento + " não pode ser realizado" );
+      }
+      break;
+
+      case 'deposito':
+      var deposito = prompt("Qual o valor do deposito? ");
+      deposito = parseFloat(deposito);
+      alert("Deposito de " + deposito + " pode ser realizado!!!");
+      saldoCorrente =  saldoCorrente + deposito;
+      alert("Saldo em conta " + saldoCorrente);
+      pulaLinha();
+      document.write("DEPOSITO");
+      pulaLinha();
+      document.write("Deposito de "+ deposito +" realizado!!! ");
+      pulaLinha();
+      document.write("Saldo em conta " + saldoCorrente);  
+      break;
+      default:
+      pulaLinha();
+      document.write("Saldo em conta " + saldoCorrente); 
+    }
+  }while(operacao != null);
+}
+  banco();
+</script>

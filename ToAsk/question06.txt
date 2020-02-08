@@ -1,0 +1,5 @@
+/*
+Escreva um algoritmo para ler uma temperatura em graus Celsius,
+calcular e escreva o valor correspondente em graus Fahrenhet.
+Para teste utilize o valor 100ºC o valor em Fahrenhet é: 212.
+*/

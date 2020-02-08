@@ -1,0 +1,39 @@
+<!-- 
+Faca um algoritmo que receba o ano de nascimento de uma pessoa e o ano atual, calcule e mostre:
+a) a idade dessa pessoa em anos;
+b) a idade dessa pessoa em meses;
+c) a idade dessa pessoa em dias;
+d) a idade dessa pessoa em semanas. 
+-->
+
+<!-- REPOSTA -->
+<script>
+
+function pulaLinha() {
+        document.write("<br>");
+    }
+
+function idade() {
+  // body...
+  var anoNasc = prompt("Ano de nascimento: ");
+  anoNasc = parseFloat(anoNasc);
+  var anoAtual = prompt("Ano atual: ");
+  anoAtual = parseFloat(anoAtual);
+  
+  	var idade = anoAtual-anoNasc;
+  	var mes = idade*12;
+  	var dias = idade*365;
+  	var semanas = idade*4;
+
+  document.write("Idade: " + idade);
+  pulaLinha();
+  document.write("Idade em dias: " + dias);
+  pulaLinha();
+  document.write("Idade em meses: " + mes);
+  pulaLinha();
+  document.write("Idade em semanas: " + semanas);
+ }
+  
+idade();
+
+</script>

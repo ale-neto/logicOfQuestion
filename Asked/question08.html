@@ -1,0 +1,23 @@
+<script>
+	var num = [];
+	var maior = 0;
+	var menor = 99999999;
+	for(i = 0; i < 5 ; i++){
+		num[i] = prompt("Digite numeros: ");
+	}
+	for(z = 0; z < num.length ; z++){
+		document.write("Numero digitado: "+ num[z] +"");
+		document.write("<hr>");
+		if(num[z] > maior){
+			maior = num[z];
+		}
+		if(num[z] < menor){
+			menor = num[z];
+		}
+	}
+	document.write("maior numero digitado: " + maior);
+	document.write("<hr>");
+	document.write("menor numero digitado: " + menor);
+
+	
+</script>

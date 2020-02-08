@@ -1,0 +1,33 @@
+<!-- Escreva um programa que leia o valor do comprimento de 3 segmentos de reta e informe se é possível construir um triângulo a 
+partir dos mesmos. -->
+
+<!-- REPOSTA -->
+<script>
+  function pulaLinha() {
+    document.write("<br>");
+  }
+  function triangulo() {
+  alert("Digite os 3 lados do triangulo");
+  var ladoA = prompt("lado A: ");
+  ladoA = parseFloat(ladoA);
+  var ladoB = prompt("lado B: ");
+  ladoB = parseFloat(ladoB);
+  var ladoC = prompt("Lado C: ")
+  ladoC = parseFloat(ladoC);
+
+  if (ladoA < ladoB + ladoC && ladoB < ladoA + ladoC && ladoC < ladoA + ladoB) {
+    if (ladoA == ladoB && ladoB == ladoC) {
+      document.write("O triangulo equilátero pode ser formado. ");
+    }else{
+      if (ladoA == ladoB || ladoA == ladoC || ladoC == ladoB) {
+        document.write("O triangulo isósceles pode ser formado. ");
+      }else{
+        document.write("O triangulo escaleno pode ser formado. ");
+      }         
+    }
+  }else{
+   document.write("O triangulo não pode ser formado. ");
+ }
+}
+triangulo();
+</script>

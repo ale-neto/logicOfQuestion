@@ -1,0 +1,19 @@
+<script>
+ /*
+10 funcionários de uma empresa recebem, anualmente, aumento salarial. Sabe-se
+que:
+a) Os funcionários foram contratados em 2005.
+b) Em 2006, eles receberam aumento de 1,5% sobre seu salário inicial.
+c) A partir de 2007 (inclusive), os aumentos salariais sempre corresponderam ao
+dobro do percentual do ano anterior.
+Faça um programa que receba o salário dos 10 funcionários e determine os
+seguintes valores:
+1) O salário atual de cada um
+2) O maior salário
+3) O segundo maior salário
+4) O menor salário
+5) A média de salários
+6) A porcentagem que a média de salários representa em relação ao salário mínimo
+*/
+  
+</script>

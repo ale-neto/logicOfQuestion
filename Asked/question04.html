@@ -1,0 +1,20 @@
+<!-- 
+Um motorista deseja colocar no seu tanque X reais de gasolina.
+Escreva um algoritmo para ler o preco do litro da gasolina e o valor do
+pagamento, e exibir quantos litros ele conseguiu colocar no tanque. 
+-->
+
+<!-- REPOSTA -->
+<script>
+function bombaGasolina() {
+  // body...
+  var vlrAbastecer = prompt("Valor a ser abastecido: ");
+  vlrAbastecer = parseFloat(vlrAbastecer);
+  var vlrLitro = prompt("Valor do combustivel: ");
+  vlrLitro = parseFloat(vlrLitro);
+  var litrosCombustivel = vlrAbastecer/vlrLitro;
+  document.write("Litros de combustivel abastecidos: " + litrosCombustivel );
+  }
+  
+bombaGasolina();
+</script>
